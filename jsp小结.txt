@@ -1,0 +1,18 @@
+out对象：页面输出内容。
+response：response.sendRedirect("topic_control.jsp?op=list"); 相当于在客户端的浏览器上输了一下页面的地址，打了下回车，页面重新加载
+request:
+request.setCharacterEncoding("utf-8"); 解决post提交方式的乱码问题
+request.getParameter("txtName");---》String
+request.getParameterValues("txtloves");String[]
+request.setAttribute("result",list);
+request.getRequestDispatcher("topic_list.jsp").forward(request,response);
+session:session里存储的内容被改web项目的所有页面享有。
+session.setArribute("自己定义的属性名",对应的值object);
+session.getArribute("属性名");
+session.removeArribute("属性名");
+session.setAttribute("loginuser",null);
+session.removeAttribute("loginuser");
+session.invalidate(); session对象清掉
+session的生命周期：当我们打开一个浏览器的时候第一次打开某某页面的时候，这时我们的浏览器客户端与服务器之间建立了一个会话session产生。
+当整个浏览器关闭session自动消失或者默认20分钟不对本网站做什么操作session自动消失。
+session一般常用于系统登录后存储用户的登录信息。
